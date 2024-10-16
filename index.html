@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Narasimharao Kowlagi">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>SPINESLICER by University of Oulu</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/offcanvas-navbar/">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#712cf9">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Paper</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto: narasimharao.kowlagi@oulu.fi?subject=Query: DEEP TTA with Human Input">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="btn btn-primary" role="button">Download</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-primary rounded box-shadow">
+        <div class="lh-100">
+            <h3 style="text-align:center" class="mb-0 text-white lh-100">SPINESLICER: EXTERNALLY VALIDATED DEEP LEARNING MODELS FOR LUMBAR SPINE SEGMENTATION, GRADING AND DISC HEIGHT INDEX CALCULATIONS</h3>
+            <strong style="text-align:center" class="d-block text-gray-dark">Narasimharao Kowlagi, Antti Kemppainen, Terence McSweeney, 
+                Simo Saarakkala, Jerome Noailly, Frances MK Williams, Jason Pui Yin Cheung, Jaro Karppinen, Huy Hoang Nguyen, Aleksei Tiulpin</strong>
+        </div>
+    </div>
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h4 class="border-bottom pb-2 mb-0">Abstract</h4>
+        <div class="d-flex text-muted pt-3">
+            <p class="pb-3 mb-0 medium lh-sm border-bottom">
+                This study introduces deep learning models for automated lumbar spine segmentation and grading with disc height index calculation via a 3D Slicer extension. Leveraging diverse datasets, we enhance model generalizability and accuracy, facilitating efficient exploration of complex phenotypes related to low back pain and their biopyschosocial factors.
+            </p>
+        </div>
+    </div>
+
+     <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h4 class="pb-2 mb-0">Results</h4>
+        <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <div class="text-center">
+                <div class="row">
+                    <div class="image-container"> 
+                        <img src="images/preds.png" class="img-fluid" alt="Predicitons" style="width:90%" >
+                     </div>   
+                </div>
+                Comparison of segmentation performance between the base and adapted models across six external lumbar spine MRI datasets. The adapted model demonstrates improved generalization providing more precise detection of vertebral bodies and intervertebral discs.
+            </div>
+    
+        </div>
+        <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <div class="text-center">
+                <div class="row">
+                    <div class="col-md-6"> 
+                        <img src="images/TSvertebrae.png" class="img-fluid" alt="Pipeline" style="width:90%">
+                    </div>
+                    <div class="col-md-6"> 
+                        <img src="images/TSDiscs.png" class="img-fluid" alt="Pipeline" style="width:90%">
+                    </div>
+                </div>
+                Model comparison between our model and the TotalSegmentator model for vertebral body and disc segmentation. Our model demonstrates superior performance across all datasets, with comparable performance on the Twins UK and SPIDER datasets, highlighting its robustness and generalizability.
+            </div>
+    
+        </div>
+        <div class="row">
+           <div class="row">
+            <div class="column">
+                <div class="row">
+                    <img src="images/results_table.png" style="width:100%">
+                </div>
+            </div>
+            </div>
+            <div>Comparison of segmentation performance (Dice similarity coefficient; DSC) between the base model, the augmented model, and the adapted model on six external datasets. The base model was trained on the NFBC1966 dataset. Inter-rater agreement (DSC) is also reported for five of the datasets.</div>
+        </div>
+    </div>
+
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h4 class="pb-2 mb-0">Demo</h4>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item spinedemo" src="media/Segmentation_Grading.webm" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h4 class="pb-2 mb-0">Windows Installation</h4>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item spinedemo" src="media/WindowsTest.mp4" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="offcanvas.js"></script>
+</body>
+</html>
+
