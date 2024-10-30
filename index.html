@@ -96,7 +96,10 @@
                     <a class="nav-link" href="mailto: narasimharao.kowlagi@oulu.fi?subject=Query: DEEP TTA with Human Input">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://oulu-imeds.github.io/spineslicer/plugin/SlicerDeepLS.zip" class="btn btn-primary" role="button">Download</a>
+                    <a href="https://oulu-imeds.github.io/spineslicer/plugin/SlicerDeepLS.zip" class="btn btn-primary"  role="button" onclick="incrementDownloadCount()">Download</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Downloads:<span id="downloadCount">0</span></a>
                 </li>
             </ul>
         </div>
@@ -181,6 +184,60 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <script src="offcanvas.js"></script>
+<script>
+    const binId = "6721fb6fe41b4d34e44b3066"; // Replace with your JSONbin Bin ID
+    const apiKey = "$2a$10$9/LdrtmLOjINKpSDe2y07u78.7ikei0HBJsGi7LiwkQCu5Sn.ZTXO"; // Replace with your JSONbin API Key
+    const url = `https://api.jsonbin.io/v3/b/${binId}`;
+
+    // Fetch the current download count when the page loads
+    async function fetchDownloadCount() {
+        try {
+            const response = await fetch(url, {
+                headers: {
+                    "X-Master-Key": apiKey
+                }
+            });
+            const data = await response.json();
+            document.getElementById("downloadCount").textContent = data.record.downloadCount;
+        } catch (error) {
+            console.error("Error fetching download count:", error);
+        }
+    }
+
+    // Increment the download count when the button is clicked
+    async function incrementDownloadCount() {
+        try {
+            // Fetch current count
+            const response = await fetch(url, {
+                headers: {
+                    "X-Master-Key": apiKey
+                }
+            });
+            const data = await response.json();
+            const newCount = data.record.downloadCount + 1;
+
+            // Update the count in JSONbin
+            await fetch(url, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Master-Key": apiKey
+                },
+                body: JSON.stringify({ downloadCount: newCount })
+            });
+
+            // Update the displayed count and initiate the download
+            document.getElementById("downloadCount").textContent = newCount;
+            window.location.href = "path_to_your_file.zip"; // Replace with your actual download file path
+
+        } catch (error) {
+            console.error("Error updating download count:", error);
+        }
+    }
+
+    // Initialize download count on page load
+    fetchDownloadCount();
+</script>
 </body>
 </html>
 
