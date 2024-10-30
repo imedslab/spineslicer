@@ -180,10 +180,6 @@
 </main>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-<script src="offcanvas.js"></script>
 <script>
     const binId = "6721fb6fe41b4d34e44b3066"; // Replace with your JSONbin Bin ID
     const apiKey = "$2a$10$9/LdrtmLOjINKpSDe2y07u78.7ikei0HBJsGi7LiwkQCu5Sn.ZTXO"; // Replace with your JSONbin API Key
@@ -228,7 +224,7 @@
 
             // Update the displayed count and initiate the download
             document.getElementById("downloadCount").textContent = newCount;
-            window.location.href = "path_to_your_file.zip"; // Replace with your actual download file path
+            // window.location.href = "https://oulu-imeds.github.io/spineslicer/plugin/SlicerDeepLS.zip"; // Replace with your actual download file path
 
         } catch (error) {
             console.error("Error updating download count:", error);
@@ -238,6 +234,11 @@
     // Initialize download count on page load
     fetchDownloadCount();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="offcanvas.js"></script>
+
 </body>
 </html>
 
